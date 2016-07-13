@@ -1,5 +1,5 @@
 struct RGB {
-  int red;
-  int green;
-  int blue;  
+  byte red;
+  byte green;
+  byte blue;  
 };
