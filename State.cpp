@@ -3,10 +3,10 @@
 
 State::State(RGB rgb, int per, int l)
 {
-  red   = (float) rgb.red;
-  green = (float) rgb.green;
-  blue  = (float) rgb.blue;
-  percent = per;
+  if (per < 1) { per = 1; } //preclude divide by 0
+  r = brightness(rgb.red, per);
+  g = brightness(rgb.green, per);
+  b = brightness(rgb.blue, per);
   len = l;
 }
 
@@ -15,27 +15,12 @@ void State::lightUp()
   return;
 }
 
-float State::getRed()
-{
-  return red * brightness();
-}
-
-float State::getBlue()
-{
-  return blue * brightness();
-}
-
-float State::getGreen()
-{
-  return green * brightness();
-}
-
 int State::getLength()
 {
   return len;
 }
 
-float State::brightness()
+byte State::brightness(byte hue, int percent)
 {
-  return ((float) percent / 100.0);
+  return ((float) hue / (float) percent * 2.54);
 }

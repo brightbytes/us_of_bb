@@ -14,13 +14,16 @@ class State
 
 public:
   State(RGB rgb, int per, int l);
-  int getLength();  
+  int getLength();
+  byte r;
+  byte g;
+  byte b;
   float getRed();
   float getGreen();
   float getBlue();
   void lightUp();
 private:
-  float brightness();
+  byte brightness(byte, int);
 };
 
 #endif

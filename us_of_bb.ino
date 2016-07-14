@@ -109,9 +109,9 @@ void loop() {
   for(int i=0;i<5;i++){
     for(int j=0;j<states[i].getLength();j++){
       int index = (i * 10) + j;
-      red_values[index] = states[i].getRed();
-      green_values[index] = states[i].getGreen();
-      blue_values[index] = states[i].getBlue();      
+      red_values[index] = states[i].r;
+      green_values[index] = states[i].g;
+      blue_values[index] = states[i].b;      
     }
   }
   update_strand();
