@@ -1,4 +1,4 @@
-#include <Adafruit_NeoPixel.h>
+#include "Adafruit_NeoPixel.h"
 #include "State.h"
 
 /*****************************************************************************
@@ -33,7 +33,7 @@ RGB bb_gray = { 145, 149, 150 };
   #include <SPI.h>
   #include <TCL.h>
 #else
-  #include <Adafruit_NeoPixel.h>
+  #include "Adafruit_NeoPixel.h"
   #define PIN 11
   Adafruit_NeoPixel pixels = Adafruit_NeoPixel(LEDS, PIN, NEO_GRB + NEO_KHZ800);
 #endif
@@ -96,7 +96,7 @@ void setup() {
   randomSeed(analogRead(0));
 }
 
-int percent = 20;
+int percent = 2;
 State al = State(bb_blue, percent, 10);
 State ar = State(bb_green, percent, 10);
 State ca = State(bb_yellow, percent, 10);

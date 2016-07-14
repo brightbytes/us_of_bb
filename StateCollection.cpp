@@ -3,7 +3,7 @@
 
 StateCollection::StateCollection()
 {
-  int percent = 50;
+  int percent = 10;
   Color colorMgr = Color();
   State al = State(colorMgr.blue(), percent, 10);
   State ar = State(colorMgr.green(), percent, 10);
