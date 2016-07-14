@@ -3,7 +3,6 @@
 
 State::State(RGB rgb, int per, int l)
 {
-  if (per < 1) { per = 1; } //preclude divide by 0
   r = brightness(rgb.red, per);
   g = brightness(rgb.green, per);
   b = brightness(rgb.blue, per);
