@@ -4,7 +4,7 @@
 StateCollection::StateCollection()
 {
   int percent = 10;
-  Color colorMgr = Color();
+  ColorMgr colorMgr = ColorMgr();
   State al = State(colorMgr.blue(), percent, 10);
   State ar = State(colorMgr.green(), percent, 10);
   State ca = State(colorMgr.yellow(), percent, 10);

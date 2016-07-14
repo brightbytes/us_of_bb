@@ -1,14 +1,14 @@
-// Color.h
-#ifndef COLOR_H
-#define COLOR_H
+// ColorMgr.h
+#ifndef COLOR_MGR_H
+#define COLOR_MGR_H
 
 #include "RGB.h"
 
-class Color
+class ColorMgr
 {
 
 public:
-  Color();
+  ColorMgr();
   RGB red();
   RGB green();
   RGB yellow();

@@ -2,7 +2,7 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include "Color.h"
+#include "ColorMgr.h"
 
 class State
 {
