@@ -3,6 +3,7 @@
 #define STATE_COLLECTION_H
 
 #include "State.h"
+#include "ColorMgr.h"
 
 class StateCollection
 {

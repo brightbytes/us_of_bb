@@ -1,28 +1,9 @@
 // ColorMgr.cpp
 #include "ColorMgr.h"
 
-RGB ColorMgr::blue()
-{
-  RGB { 0, 196, 223 };
-}
 
-RGB ColorMgr::green()
-{
-  RGB { 0, 204, 153 };
-}
-
-RGB ColorMgr::yellow()
-{
-  RGB { 225, 170, 23 };
-}
-
-RGB ColorMgr::red()
-{
-  RGB { 245, 110, 143 };
-}
-
-RGB ColorMgr::gray()
-{
-  RGB { 145, 149, 150 };
-}
-
+RGB ColorMgr::blue = { 0, 196, 223 };
+RGB ColorMgr::green = { 0, 204, 153 };
+RGB ColorMgr::yellow = { 225, 170, 23 };
+RGB ColorMgr::red = { 245, 110, 143 };
+RGB ColorMgr::gray = { 24, 25, 25 };

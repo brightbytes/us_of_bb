@@ -4,16 +4,15 @@
 
 #include "RGB.h"
 
-class ColorMgr
+struct ColorMgr
 {
 
 public:
-  ColorMgr();
-  RGB red();
-  RGB green();
-  RGB yellow();
-  RGB gray();
-  RGB blue();
+  static RGB red;
+  static RGB green;
+  static RGB yellow;
+  static RGB gray;
+  static RGB blue;
 };
 
 #endif

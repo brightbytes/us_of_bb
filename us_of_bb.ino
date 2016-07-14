@@ -1,5 +1,6 @@
 #include "Adafruit_NeoPixel.h"
 #include "State.h"
+#include "ColorMgr.h"
 
 /*****************************************************************************
 * Patriotic.ino
@@ -96,22 +97,24 @@ void setup() {
   randomSeed(analogRead(0));
 }
 
-int percent = 2;
-State al = State(bb_blue, percent, 10);
-State ar = State(bb_green, percent, 10);
-State ca = State(bb_yellow, percent, 10);
-State org = State(bb_red, percent, 10);
-State mi = State(bb_gray, percent, 10);
+int percent = 20;
+State al = State(ColorMgr::green, percent, 1);
+State ar = State(ColorMgr::blue, percent, 1);
+State ca = State(ColorMgr::yellow, percent, 1);
+State org = State(ColorMgr::red, percent, 1);
+State mi = State(ColorMgr::gray, percent, 1);
 
-State states[5] = {al, ar, ca, org, mi};
+const int statenum=5;
+State states[statenum] = {al, ar, ca, org, mi};
 
-void loop() {  
-  for(int i=0;i<5;i++){
-    for(int j=0;j<states[i].getLength();j++){
-      int index = (i * 10) + j;
+void loop() {
+  int index = 0;
+  for(int i=0;i<statenum;i++){
+    for(int j=0;j<states[i].getLength()&&index<LEDS;j++){
       red_values[index] = states[i].r;
       green_values[index] = states[i].g;
-      blue_values[index] = states[i].b;      
+      blue_values[index] = states[i].b;
+      index++;
     }
   }
   update_strand();
