@@ -22,5 +22,5 @@ int State::getLength()
 
 byte State::brightness(byte hue, int percent)
 {
-  return ((float) hue / (float) percent * 2.54);
+  return ((float) hue * ((float) percent / 100));
 }
