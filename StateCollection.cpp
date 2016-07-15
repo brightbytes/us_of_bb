@@ -6,11 +6,6 @@ StateCollection::StateCollection()
 {
   int percent = 10;
   State al = State(ColorMgr::blue, percent, 10);
-  State ar = State(ColorMgr::green, percent, 10);
-  State ca = State(ColorMgr::yellow, percent, 10);
-  State org = State(ColorMgr::red, percent, 10);
-  State mi = State(ColorMgr::gray, percent, 10);
-  State al = State(ColorMgr::blue, percent, 10);
   // State ak = State(ColorMgr::blue, percent, 10);
   State az = State(ColorMgr::blue, percent, 10);
   State ar = State(ColorMgr::blue, percent, 10);
