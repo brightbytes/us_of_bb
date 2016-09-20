@@ -1,4 +1,7 @@
-# us_of_bb
-arduino project showing the adoption rate across states in the US of BrightBytes software
+# UsOfBb
+Display BrightBytes customer penetration on a physical map of the United States using LED lights
+to convey the information.
 
-This was built during a hackathon at BrightBytes, using a Seeeduino, RGB LEDs from Cool Neo Lighting in Oakland, CA.
+Currently this is built on Elixir Nerves running on a Raspberry Pi 3.
+
+## Installation
