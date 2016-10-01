@@ -22,15 +22,12 @@ defmodule UsOfBb.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {UsOfBb, []},
-      applications: [:logger, :nerves, :nerves_neopixel]
-    ]
+      applications: [:nerves, :nerves_io_neopixel]]
   end
 
   def deps do
-    [
-      {:nerves, "~> 0.3", github: "nerves-project/nerves"},
-      {:nerves_neopixel, "~> 0.3.0", github: "GregMefford/nerves_neopixel", submodules: true}
-    ]
+    [{:nerves, "~> 0.3.0"},
+     {:nerves_neopixel, "~> 0.3.0"}]
   end
 
   def system(target) do
