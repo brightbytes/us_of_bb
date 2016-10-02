@@ -22,7 +22,7 @@ defmodule UsOfBb.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {UsOfBb, []},
-      applications: [:nerves, :nerves_io_neopixel]]
+      applications: [:logger, :nerves_neopixel]]
   end
 
   def deps do

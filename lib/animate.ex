@@ -2,8 +2,7 @@ defmodule UsOfBb.Animate do
   @moduledoc """
   Show the adoption rate of BB across the United States using NeoPixel LEDS.
   """
-
-  use Application
+  
   alias Nerves.Neopixel
 
   def neopixel_values do
