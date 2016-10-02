@@ -9,12 +9,12 @@ defmodule UsOfBb do
     import Supervisor.Spec, warn: false
 
     ch0_config = Application.get_env(:neopixel, :channel0)
-    [pin, count] = [ch0_config[:pin], States.light_count(States.states)]
-
+    neo_config = [pin: ch0_config[:pin],
+      count: States.light_count(States.states)] # can't put `States.light_count` in a config
 
     children = [
-      worker(Nerves.Neopixel, [[pin, count]]),
-      worker(Task, [fn -> UsOfBb.Animate.lights_on(0) end], id: :lights_on),
+      worker(Nerves.Neopixel, [neo_config]),
+      worker(Task, [fn -> UsOfBb.Animate.lights_on(0) end], id: :lights_on)
     ]
 
     opts = [strategy: :one_for_one, name: Neopixel.Supervisor]
