@@ -1,7 +1,7 @@
 defmodule UsOfBb.Mixfile do
   use Mix.Project
 
-  @target System.get_env("NERVES_TARGET") || "rpi3"
+  @target System.get_env("NERVES_TARGET") || "rpi2"
 
   def project do
     [app: :us_of_bb,
