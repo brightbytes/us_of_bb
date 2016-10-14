@@ -1,7 +1,7 @@
 defmodule UsOfBb.Mixfile do
   use Mix.Project
 
-  @target System.get_env("NERVES_TARGET") || "rpi2"
+  @target System.get_env("NERVES_TARGET") || "rpi3"
 
   def project do
     [app: :us_of_bb,
@@ -22,7 +22,18 @@ defmodule UsOfBb.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {UsOfBb, []},
-      applications: [:logger, :nerves_neopixel]]
+      applications: [
+        #:nerves_system_rpi2,
+        :nerves_system_rpi3,
+        :logger,
+        :nerves_neopixel,
+        :nerves_system,
+        :nerves_system_br,
+        :nerves_toolchain_arm_unknown_linux_gnueabihf,
+        :nerves_toolchain,
+        :nerves
+      ]
+    ]
   end
 
   def deps do

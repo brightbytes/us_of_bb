@@ -19,6 +19,7 @@ defmodule UsOfBb.Animate do
 
   def lights_on_forever(channel) do
     Logger.info("lights_on_forever()")
+    Logger.info("state #{inspect(state_pixel_values)}")
     Neopixel.render(channel, state_pixel_values)
     :timer.sleep(10000) # do we need to loop?
     lights_on_forever(channel)
