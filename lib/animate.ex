@@ -1,3 +1,5 @@
+require Logger
+
 defmodule UsOfBb.Animate do
   @moduledoc """
   Show the adoption rate of BB across the United States using NeoPixel LEDS.
@@ -16,8 +18,9 @@ defmodule UsOfBb.Animate do
   end
 
   def lights_on_forever(channel) do
+    Logger.info("lights_on_forever()")
     Neopixel.render(channel, state_pixel_values)
-    :timer.sleep(100)
+    :timer.sleep(10000) # do we need to loop?
     lights_on_forever(channel)
   end
 
