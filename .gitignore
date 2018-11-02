@@ -1,2 +1,11 @@
-# TCL.*
-# Adafruit_NeoPixel.*
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+
+# Nerves images
+/_images
+
+# Generate on crash by the VM
+erl_crash.dump

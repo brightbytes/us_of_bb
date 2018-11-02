@@ -1,4 +1,27 @@
-# us_of_bb
-arduino project showing the adoption rate across states in the US of BrightBytes software
+# UsOfBb
+Display BrightBytes customer penetration on a physical map of the United States using LED lights
+to convey the information.
 
-This was built during a hackathon at BrightBytes, using a Seeeduino, RGB LEDs from Cool Neo Lighting in Oakland, CA.
+Currently this is built on Elixir Nerves running on a Raspberry Pi 3.
+
+## Installation
+We started with a `nerves.new` project as [described here](https://hexdocs.pm/nerves/getting-started.html).
+
+    mix archive.install https://github.com/nerves-project/archives/raw/master/nerves_bootstrap.ez
+    mix deps.get
+    mix test
+
+
+## Deploy
+We must compile, make firmware and load it on a micro SD card. To start your Nerves app:
+
+  * Install dependencies with `mix deps.get; mix compile`
+  * Create firmware with `mix firmware`
+  * Burn to an SD card with `mix firmware.burn`
+
+## Learn more
+
+  * Official docs: https://hexdocs.pm/nerves/getting-started.html
+  * Official website: http://www.nerves-project.org/
+  * Discussion Slack elixir-lang #nerves ([Invite](https://elixir-slackin.herokuapp.com/))
+  * Source: https://github.com/nerves-project/nerves
